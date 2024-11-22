@@ -7,30 +7,30 @@ channels:
 
 dependencies:
 # Essential
-- python==3.9.10
-- nb_conda_kernels==2.3.1
-- pip==22.2.1
-- ipython==8.5.0
-- tqdm==4.64.0
+- python
+- nb_conda_kernels
+- pip
+- ipython
+- tqdm
 # Data Science
-- numpy==1.23.3
-- scipy==1.9.1
-- pandas==1.5.0
+- numpy
+- scipy
+- pandas
 # Machine Learning
-- scikit-learn==1.0.2
-- xgboost==1.5.1
-- scikit-optimize== 0.9.0
+- scikit-learn
+- xgboost
+- scikit-optimize
 # Visualization
-- matplotlib==3.6.0
-- seaborn==0.12.0
-- ipywidgets==8.0.2
+- matplotlib
+- seaborn
+- ipywidgets
 # NLP
-- nltk==3.7
-- torchtext==0.13.1
+- nltk
+- torchtext
 # Deep Learning
-- pytorch==1.12.1
+- pytorch
 # Computer Vision
-- torchvision==0.13.1
+- torchvision
 
 - pip:
   # Machine Learning
