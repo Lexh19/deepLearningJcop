@@ -1,0 +1,523 @@
+{
+    "intents": [
+        {
+            "tag": "sapaan",
+            "patterns": [
+                "Hai",
+                "Halo",
+                "Selamat pagi",
+                "Selamat siang",
+                "Selamat sore",
+                "halo",
+                "hallo",
+                "hay"
+            ],
+            "responses": [
+                "Halo! Selamat datang di chatbot TI USU. Ada yang bisa saya bantu?",
+                "Hai! Apa yang ingin Anda ketahui tentang TI USU?"
+            ]
+        },
+        {
+            "tag": "selamat_tinggal",
+            "patterns": [
+                "Sampai jumpa", 
+                "Selamat tinggal"
+            ],
+            "responses": [
+                "Sampai jumpa lagi, Semoga bahagia selalu.", 
+                "Selamat tinggal. Kami siap membantu anda lagi.", 
+                "Semoga melihat kamu kembali."
+            ]
+        },
+        {
+            "tag": "terimakasih",
+            "patterns": [
+                "Terimakasih", 
+                "Terimakasih banyak", 
+                "Terimakasih atas bantuannya.", 
+                "Terimakasih. Sangat membantu."
+            ],
+            "responses": [
+                "Terimakasih kembali", 
+                "Sama-sama. Siap membantu anda kapanpun!", 
+                "Dengan senang hati.", 
+                "Terimakasih kembali. Semoga hari kamu menyenangkan."
+            ]
+        },
+        {
+            "tag": "tentang_ti_usu",
+            "patterns": [
+                "Apa itu TI USU?",
+                "Jelaskan tentang TI USU",
+                "TI USU itu apa?",
+                "Apa yang ditawarkan TI USU?"
+            ],
+            "responses": [
+                "Program Studi Teknologi Informasi di Universitas Sumatera Utara bertujuan untuk menghasilkan lulusan yang kompeten dalam bidang teknologi informasi dengan fokus pada data science dan intelligent systems."
+            ]
+        },
+        {
+            "tag": "visi_misi",
+            "patterns": [
+                "Apa visi dan misi TI USU?",
+                "Jelaskan visi TI USU.",
+                "Misi apa yang diusung oleh TI USU?"
+            ],
+            "responses": [
+                "Visi TI USU: Menjadi Program Studi yang unggul dan professional dalam pengembangan ilmu pengetahuan bidang Teknologi Informasi dengan penekanan pada Data Science dan Intelligent Systems."
+            ]
+        },
+        {
+            "tag": "mata_kuliah",
+            "patterns": [
+                "Apa saja mata kuliah di TI USU?",
+                "Apa yang dipelajari di TI USU?",
+                "Mata kuliah utama di TI USU apa saja?"
+            ],
+            "responses": [
+                "Mata kuliah di TI USU mencakup:\n1. Pengantar Teknologi Informasi\n2. Dasar Pemrograman\n3. Sistem Basis Data\n4. Jaringan Komputer\n5. Pemrograman Web\n6. Data Science\n7. Kecerdasan Buatan."
+            ]
+        },
+        {
+            "tag": "fasilitas",
+            "patterns": [
+                "Apa fasilitas yang tersedia di TI USU?",
+                "Apakah TI USU memiliki laboratorium?",
+                "Fasilitas apa saja di TI USU?"
+            ],
+            "responses": [
+                "TI USU memiliki fasilitas seperti:\n1. Laboratorium komputer canggih\n2. Perpustakaan digital\n3. Ruang kolaborasi mahasiswa\n4. Akses e-learning."
+            ]
+        },
+        {
+            "tag": "profil_lulusan",
+            "patterns": [
+                "Apa profil lulusan TI USU?",
+                "Lulusan TI USU bisa bekerja di mana?",
+                "Deskripsi lulusan TI USU?"
+            ],
+            "responses": [
+                "Profil lulusan TI USU meliputi:\n1. System Analyst dan Programmer\n2. Database Manager\n3. Network Manager\n4. Multimedia Designer\n5. IT Consultant\n6. IT Manager\n7. IT Entrepreneur."
+            ]
+        },
+        {
+            "tag": "jadwal_akademik",
+            "patterns": [
+                "Kapan perkuliahan dimulai?",
+                "Jelaskan jadwal akademik TI USU.",
+                "Kapan UTS dan UAS diadakan?"
+            ],
+            "responses": [
+                "Semester ganjil dimulai pada bulan Agustus, dengan UTS sekitar Oktober dan UAS sekitar Desember."
+            ]
+        },
+        {
+            "tag": "kontak",
+            "patterns": [
+                "Bagaimana cara menghubungi TI USU?",
+                "Apakah ada nomor telepon TI USU?",
+                "Dimana lokasi TI USU?"
+            ],
+            "responses": [
+                "Anda dapat menghubungi TI USU melalui email: tiusu@usu.ac.id atau telepon: +62 61 8216575. Lokasi: Fakultas Ilmu Komputer dan Teknologi Informasi, Universitas Sumatera Utara."
+            ]
+        },
+        {
+            "tag": "beasiswa",
+            "patterns": [
+                "Apakah TI USU menawarkan beasiswa?",
+                "Beasiswa apa saja di TI USU?",
+                "Bagaimana cara mendapatkan beasiswa di TI USU?"
+            ],
+            "responses": [
+                "TI USU menawarkan beberapa beasiswa, termasuk:\n1. Beasiswa Prestasi Akademik\n2. Beasiswa KIP Kuliah\n3. Beasiswa Penelitian."
+            ]
+        },
+        {
+            "tag": "struktur_organisasi",
+            "patterns": [
+                "Siapa ketua TI USU?",
+                "Jelaskan struktur organisasi TI USU.",
+                "Apakah ada daftar dosen TI USU?"
+            ],
+            "responses": [
+                "Ketua Program Studi: Romi Fadillah Rahmat, B.Comp. Sc., M.Sc.\nDosen-dosen meliputi:\n1. Dr. Sawaluddin, M.IT\n2. Rossy Nurhasanah, S.Kom., M.Kom."
+            ]
+        },
+        {
+            "tag": "pendanaan",
+            "patterns": [
+                "Bagaimana sumber pendanaan di TI USU?",
+                "Dari mana dana TI USU berasal?",
+                "Apakah ada detail keuangan TI USU?"
+            ],
+            "responses": [
+                "Sumber pendanaan TI USU meliputi:\n1. Dana SPP: Rp 15.803.007.856\n2. Dana Kelengkapan Akademik: Rp 2.315.000.000\n3. Wisuda: Rp 24.500.000\n4. Hibah Penelitian dan Pengabdian: Rp 2.163.256.000 (Hibah Talenta)\n5. Dana APBN: Rp 4.737.835.796\nUntuk rincian lebih lanjut, silakan kunjungi situs resmi universitas."
+            ]
+        },
+        {
+            "tag": "fasilitas_lab",
+            "patterns": [
+                "Apa saja fasilitas laboratorium di TI USU?",
+                "Jelaskan fasilitas lab di TI USU.",
+                "Berapa jumlah laboratorium di TI USU?"
+            ],
+            "responses": [
+                "TI USU memiliki beberapa laboratorium:\n1. Lab Data Science & Intelligent Systems.\n2. Lab Computer Vision & Multimedia.\n3. Lab Computer Systems & Security.\n4. Lab Pemrograman dan Jaringan.\nJam operasional: 08.00 - 16.00."
+            ]
+        },
+        {
+            "tag": "ruang_kelas",
+            "patterns": [
+                "Berapa ruang kelas yang tersedia di TI USU?",
+                "Apa fasilitas ruang kelas di TI USU?",
+                "Jelaskan tentang ruang kelas di TI USU."
+            ],
+            "responses": [
+                "TI USU memiliki ruang kelas dengan daya tampung bervariasi:\n- Gedung B: 30 orang/kelas.\n- Gedung C: 50 orang/kelas.\n- Gedung D: 50 orang/kelas.\nJam operasional: 08.00 - 16.00."
+            ]
+        },
+        {
+            "tag": "layanan_digital",
+            "patterns": [
+                "Apa layanan digital yang disediakan TI USU?",
+                "Layanan online apa yang tersedia di TI USU?",
+                "Bagaimana mengakses portal TI USU?"
+            ],
+            "responses": [
+                "TI USU memiliki layanan digital seperti:\n1. Portal Mahasiswa: https://portal.usu.ac.id/\n2. Elearning: https://elearning2.usu.ac.id/\n3. Sistem Administrasi Akademik: https://sia.usu.ac.id/\n4. Keuangan: https://rka.usu.ac.id/"
+            ]
+        },
+        {
+            "tag": "sarana_prasarana",
+            "patterns": [
+                "Apa sarana prasarana TI USU?",
+                "Jelaskan fasilitas umum di TI USU.",
+                "Apa saja yang tersedia untuk mendukung belajar di TI USU?"
+            ],
+            "responses": [
+                "Sarana dan prasarana TI USU meliputi:\n1. Ruang Administrasi Fakultas dan Program Studi.\n2. Ruang Seminar dan Sidang.\n3. Ruang Belajar Mandiri.\n4. Taman Gedung A, B, dan E.\n5. Musholla dan Sarana Olahraga.\n6. Pantri dan toilet di setiap gedung."
+            ]
+        },
+        {
+            "tag": "jadwal_akademik_lengkap",
+            "patterns": [
+                "Apa jadwal akademik terbaru?",
+                "Bisa berikan kalender akademik TI USU?",
+                "Kapan libur semester?"
+            ],
+            "responses": [
+                "Kalender akademik 2024-2025:\n- Semester ganjil: Agustus 2024 - Januari 2025.\n- UTS: Oktober 2024.\n- UAS: Desember 2024.\nUntuk libur semester, berlangsung pada Januari dan Juli."
+            ]
+        },
+        {
+            "tag": "kurikulum_kkni",
+            "patterns": [
+                "Apa kurikulum TI USU?",
+                "Jelaskan kurikulum KKNI di TI USU.",
+                "Apakah TI USU menggunakan OBE?"
+            ],
+            "responses": [
+                "TI USU menggunakan kurikulum berbasis KKNI (Kerangka Kualifikasi Nasional Indonesia) yang telah dikonversi ke OBE (Outcome-Based Education). Mata kuliah mencakup kemampuan teknis, analisis, dan manajerial."
+            ]
+        },
+        {
+            "tag": "dosen",
+            "patterns": [
+                "Siapa saja dosen TI USU?",
+                "Jelaskan daftar pengajar di TI USU.",
+                "Apakah ada profesor di TI USU?"
+            ],
+            "responses": [
+                "Beberapa dosen TI USU:\n- Prof. Dr. Opim Salim Sitompul, M.Sc.\n- Dr. Sawaluddin, M.IT.\n- Rossy Nurhasanah, S.Kom., M.Kom.\nUntuk daftar lengkap, silakan kunjungi situs resmi."
+            ]
+        },
+        {
+            "tag": "keuangan",
+            "patterns": [
+                "Berapa biaya kuliah di TI USU?",
+                "Apakah ada rincian UKT di TI USU?",
+                "Bagaimana sistem keuangan mahasiswa?"
+            ],
+            "responses": [
+                "Biaya kuliah di TI USU menggunakan sistem UKT (Uang Kuliah Tunggal) yang disesuaikan dengan penghasilan orang tua. Rincian lebih lanjut dapat diperoleh di bagian administrasi fakultas."
+            ]
+        },
+        {
+            "tag": "program_unggulan",
+            "patterns": [
+                "Apa program unggulan di TI USU?",
+                "Apakah TI USU memiliki fokus khusus?",
+                "Program andalan TI USU apa saja?"
+            ],
+            "responses": [
+                "Program unggulan TI USU meliputi:\n1. Data Science dan Big Data.\n2. Sistem Cerdas.\n3. Pengembangan Aplikasi Mobile dan Web.\n4. Cybersecurity."
+            ]
+        },
+        {
+            "tag": "fasilitas_ti",
+            "patterns": [
+                "Fasilitas apa saja yang disediakan TI USU?",
+                "Apakah ada laboratorium di TI USU?",
+                "Bagaimana fasilitas mahasiswa TI USU?"
+            ],
+            "responses": [
+                "Fasilitas TI USU:\n1. Laboratorium Komputer dan Jaringan.\n2. Perpustakaan Digital.\n3. Ruang Diskusi Mahasiswa.\n4. Akses ke Portal E-Learning."
+            ]
+        },
+        {
+            "tag": "alur_pendaftaran",
+            "patterns": [
+                "Bagaimana cara mendaftar di TI USU?",
+                "Apakah ada informasi pendaftaran?",
+                "Jelaskan alur masuk TI USU."
+            ],
+            "responses": [
+                "Untuk mendaftar:\n1. Ikuti SNMPTN/SBMPTN.\n2. Siapkan dokumen seperti ijazah dan kartu identitas.\n3. Pilih TI USU sebagai program pilihan.\nInformasi lebih lanjut di website resmi Universitas Sumatera Utara."
+            ]
+        },
+        {
+            "tag": "kurikulum_obe",
+            "patterns": [
+                "Apa itu kurikulum OBE?",
+                "Jelaskan tentang KKNI ke OBE.",
+                "Bagaimana kurikulum TI USU diimplementasikan?"
+            ],
+            "responses": [
+                "Kurikulum TI USU berbasis Outcome-Based Education (OBE), di mana pembelajaran berfokus pada hasil yang diinginkan. Kurikulum ini juga mengadopsi Kerangka Kualifikasi Nasional Indonesia (KKNI), mencakup mata kuliah inti seperti Dasar Pemrograman, Data Science, dan Kecerdasan Buatan."
+            ]
+        },
+        {
+            "tag": "mata_kuliah_wajib",
+            "patterns": [
+                "Apa saja mata kuliah wajib di TI USU?",
+                "Mata kuliah inti TI USU apa saja?",
+                "Jelaskan mata kuliah di kurikulum baru."
+            ],
+            "responses": [
+                "Mata kuliah wajib di TI USU meliputi:\n1. Dasar Pemrograman\n2. Pemrograman Berorientasi Objek\n3. Struktur Data dan Algoritma\n4. Sistem Basis Data\n5. Pemrograman Web\n6. Kecerdasan Buatan\n7. Manajemen Sistem Basis Data."
+            ]
+        },
+        {
+            "tag": "mata_kuliah_pilihan",
+            "patterns": [
+                "Apa mata kuliah pilihan di TI USU?",
+                "Apakah ada mata kuliah pilihan?",
+                "Mata kuliah tambahan TI USU apa saja?"
+            ],
+            "responses": [
+                "Mata kuliah pilihan di TI USU meliputi:\n1. Efek Visual dan Animasi\n2. Pembelajaran Mesin\n3. Internet of Things\n4. Sistem Sensor dan Aplikasi\n5. Virtual dan Augmented Reality."
+            ]
+        },
+        {
+            "tag": "praktikum",
+            "patterns": [
+                "Apakah ada praktikum di TI USU?",
+                "Jelaskan tentang praktikum di TI USU.",
+                "Praktikum apa saja yang tersedia?"
+            ],
+            "responses": [
+                "TI USU menyediakan berbagai praktikum untuk mendukung pembelajaran, termasuk:\n1. Praktikum Pemrograman Web\n2. Praktikum Sistem Basis Data\n3. Praktikum Pemrograman Berorientasi Objek\n4. Praktikum Efek Visual dan Animasi."
+            ]
+        },
+        {
+            "tag": "profil_lulusan",
+            "patterns": [
+                "Apa profil lulusan TI USU?",
+                "Lulusan TI USU bisa bekerja di mana?",
+                "Jelaskan profil lulusan kurikulum OBE."
+            ],
+            "responses": [
+                "Lulusan TI USU memiliki profil sebagai:\n1. Pengembang Perangkat Lunak\n2. Data Scientist\n3. Konsultan IT\n4. Manajer Keamanan Siber\n5. Ahli Kecerdasan Buatan."
+            ]
+        },
+        {
+            "tag": "mata_kuliah_semester_2",
+            "patterns": [
+                "Apa saja mata kuliah semester 2 di TI USU?",
+                "Mata kuliah di semester 2 apa saja?"
+            ],
+            "responses": [
+                "Mata kuliah semester 2 TI USU meliputi:\n1. Pemrograman Berorientasi Objek (3 SKS) - Prof. Dr. Opim Salim Sitompul, M.Sc.\n2. Praktikum Pemrograman Berorientasi Objek (1 SKS) - Prof. Dr. Opim Salim Sitompul, M.Sc.\n3. Pemrograman Web Lanjutan (3 SKS) - Mohammad Fadly Syahputra, M.Sc.IT.\n4. Sistem Basis Data (3 SKS) - Umaya Ramadhani Putri Nasution, S.TI, M.Kom."
+            ]
+        },
+        {
+            "tag": "mata_kuliah_semester_4",
+            "patterns": [
+                "Apa saja mata kuliah semester 4 di TI USU?",
+                "Mata kuliah di semester 4 apa saja?"
+            ],
+            "responses": [
+                "Mata kuliah semester 4 TI USU meliputi:\n1. Analisis dan Desain Sistem (3 SKS) - Dr. Muhammad Anggia Muchtar, M.M.IT.\n2. Jaminan dan Keamanan Informasi (2 SKS) - Fahrurrozi Lubis, B.IT., M.Sc.IT.\n3. Sistem Operasi (2 SKS) - Dr. Marischa Elveny, S.TI, M.Kom.\n4. Kecerdasan Buatan (2 SKS) - Fanindia Purnamasari, S.TI, M.IT."
+            ]
+        },
+        {
+            "tag": "dosen_pengampu",
+            "patterns": [
+                "Siapa dosen yang mengajar Pemrograman Web Lanjutan?",
+                "Siapa dosen pengampu Sistem Basis Data?"
+            ],
+            "responses": [
+                "Dosen pengampu Pemrograman Web Lanjutan:\n- Mohammad Fadly Syahputra, M.Sc.IT.\n- Ivan Jaya, M.Kom.\nDosen pengampu Sistem Basis Data:\n- Umaya Ramadhani Putri Nasution, S.TI, M.Kom.\n- Sarah Purnamawati, M.Sc."
+            ]
+        },
+        {
+            "tag": "mata_kuliah_praktikum",
+            "patterns": [
+                "Apa saja mata kuliah praktikum di TI USU?",
+                "Praktikum apa yang tersedia di TI USU?"
+            ],
+            "responses": [
+                "TI USU menyediakan beberapa praktikum, termasuk:\n1. Praktikum Pemrograman Berorientasi Objek\n2. Praktikum Pemrograman Web Lanjutan\n3. Praktikum Sistem Basis Data\n4. Praktikum Kecerdasan Buatan."
+            ]
+        },
+        {
+            "tag": "deskripsi_program_studi",
+            "patterns": [
+                "Apa deskripsi singkat program studi TI USU?",
+                "Jelaskan tentang program studi TI USU.",
+                "Apa fokus utama TI USU?"
+            ],
+            "responses": [
+                "Program Studi Teknologi Informasi Universitas Sumatera Utara berfokus pada pengembangan teknologi informasi, data science, dan intelligent systems. Tujuannya adalah untuk mencetak lulusan yang kompeten dalam industri teknologi."
+            ]
+        },
+        {
+            "tag": "visi_misi_program_studi",
+            "patterns": [
+                "Apa visi TI USU?",
+                "Jelaskan misi program studi TI USU.",
+                "Apa tujuan TI USU?"
+            ],
+            "responses": [
+                "Visi: Menjadi program studi unggulan dalam pengembangan teknologi informasi yang relevan dengan kebutuhan global.\nMisi:\n1. Menyelenggarakan pendidikan berkualitas.\n2. Menghasilkan penelitian inovatif di bidang teknologi.\n3. Berkontribusi pada masyarakat melalui pengabdian."
+            ]
+        },
+        {
+            "tag": "struktur_kurikulum",
+            "patterns": [
+                "Apa saja mata kuliah wajib di TI USU?",
+                "Bagaimana struktur kurikulum TI USU?",
+                "Apa mata kuliah pilihan di TI USU?"
+            ],
+            "responses": [
+                "Struktur Kurikulum TI USU terdiri dari:\n- Mata Kuliah Wajib: Dasar Pemrograman, Sistem Basis Data, Jaringan Komputer, Data Science.\n- Mata Kuliah Pilihan: Internet of Things, Pembelajaran Mesin, Virtual Reality."
+            ]
+        },
+        {
+            "tag": "persyaratan_masuk",
+            "patterns": [
+                "Apa syarat masuk TI USU?",
+                "Jelaskan persyaratan masuk TI USU.",
+                "Bagaimana cara mendaftar ke TI USU?"
+            ],
+            "responses": [
+                "Persyaratan masuk TI USU meliputi:\n1. Lulus ujian nasional (SNMPTN/SBMPTN).\n2. Memenuhi persyaratan administrasi seperti ijazah dan KTP.\n3. Pendaftaran dapat dilakukan melalui portal resmi Universitas Sumatera Utara."
+            ]
+        },
+        {
+            "tag": "karir_setelah_lulus",
+            "patterns": [
+                "Apa peluang karir untuk lulusan TI USU?",
+                "Karir apa yang relevan dengan TI USU?",
+                "Lulusan TI USU bekerja di mana?"
+            ],
+            "responses": [
+                "Lulusan TI USU memiliki peluang karir seperti:\n- Pengembang Perangkat Lunak\n- Data Scientist\n- Ahli Jaringan Komputer\n- Konsultan IT\n- Pengembang Sistem Cerdas."
+            ]
+        },
+        {
+            "tag": "fasilitas_program_studi",
+            "patterns": [
+                "Apa saja fasilitas di TI USU?",
+                "Fasilitas apa yang mendukung belajar di TI USU?",
+                "Apakah ada laboratorium di TI USU?"
+            ],
+            "responses": [
+                "Fasilitas di TI USU meliputi:\n- Laboratorium Pemrograman dan Data Science\n- Perpustakaan Digital\n- Organisasi Mahasiswa Teknologi Informasi\n- Ruang Belajar Mandiri."
+            ]
+        },
+        {
+            "tag": "kontak_program_studi",
+            "patterns": [
+                "Bagaimana cara menghubungi TI USU?",
+                "Kontak TI USU apa saja?",
+                "Dimana lokasi TI USU?"
+            ],
+            "responses": [
+                "Kontak TI USU:\n- Alamat: Fakultas Ilmu Komputer dan Teknologi Informasi, Universitas Sumatera Utara\n- Telepon: +62 61 8216575\n- Email: tiusu@usu.ac.id\n- Situs Web: https://usu.ac.id"
+            ]
+        },
+        {
+            "tag": "informasi_mbkm",
+            "patterns": [
+                "Apa itu program MBKM di TI USU?",
+                "Apa peluang magang di TI USU?",
+                "Apakah ada program pertukaran mahasiswa?"
+            ],
+            "responses": [
+                "Informasi MBKM di TI USU:\n- Program Pertukaran Mahasiswa dengan universitas mitra.\n- Peluang Magang di perusahaan teknologi.\n- Dukungan untuk pengembangan kewirausahaan melalui inkubator bisnis."
+            ]
+        },
+        {
+            "tag": "jadwal_semester_ganjil",
+            "patterns": [
+                "Kapan awal dan akhir semester ganjil?",
+                "Apa jadwal semester ganjil 2024/2025?"
+            ],
+            "responses": [
+                "Semester ganjil dimulai pada 19 Agustus 2024 dan berakhir pada 10 Januari 2025."
+            ]
+        },
+        {
+            "tag": "jadwal_semester_genap",
+            "patterns": [
+                "Kapan awal dan akhir semester genap?",
+                "Apa jadwal semester genap 2024/2025?"
+            ],
+            "responses": [
+                "Semester genap dimulai pada 10 Februari 2025 dan berakhir pada 27 Juni 2025."
+            ]
+        },
+        {
+            "tag": "jadwal_uts_uas",
+            "patterns": [
+                "Kapan UTS dan UAS semester ganjil?",
+                "Jelaskan jadwal UTS dan UAS 2024."
+            ],
+            "responses": [
+                "UTS semester ganjil dijadwalkan pada 7–18 Oktober 2024, dan UAS dijadwalkan pada 9–20 Desember 2024."
+            ]
+        },
+        {
+            "tag": "registrasi_akademik",
+            "patterns": [
+                "Kapan periode registrasi akademik?",
+                "Apa jadwal pembayaran UKT?"
+            ],
+            "responses": [
+                "Registrasi akademik semester ganjil berlangsung dari 1–17 Agustus 2024. Pembayaran UKT juga dilakukan pada periode ini."
+            ]
+        },
+        {
+            "tag": "libur_akademik",
+            "patterns": [
+                "Kapan libur semester?",
+                "Apa saja hari libur nasional di kalender akademik?"
+            ],
+            "responses": [
+                "Libur semester genap berlangsung dari 28 Juni hingga 5 September 2025. Hari libur nasional mencakup:\n- Tahun Baru Islam: 7 Juli 2024\n- Hari Kemerdekaan RI: 17 Agustus 2024\n- Maulid Nabi: 16 September 2024\n- Natal: 25 Desember 2024\n- Tahun Baru: 1 Januari 2025\n- Hari Raya Idul Fitri: 31 Maret - 1 April 2025."
+            ]
+        },
+        {
+            "tag": "mbkm",
+            "patterns": [
+                "Apa jadwal MBKM di TI USU?",
+                "Jelaskan jadwal kegiatan MBKM 2024/2025."
+            ],
+            "responses": [
+                "Pelaksanaan MBKM untuk semester ganjil berlangsung dari 19 Agustus hingga 21 Desember 2024, dengan monitoring pada 7–11 Oktober 2024."
+            ]
+        }
+    ]
+}
