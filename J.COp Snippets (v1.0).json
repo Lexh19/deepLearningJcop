@@ -1,0 +1,575 @@
+{
+    "name": "J.COp Snippets (v1.0)",
+    "menu-direction": "right",
+    "sub-menu-direction": "right",
+    "sub-menu": [
+        {
+            "name": "Scikit-learn",
+            "sub-menu": [
+                {
+                    "name": "Import common packages",
+                    "snippet": [
+                        "import numpy as np",
+                        "import pandas as pd",
+                        "",
+                        "from sklearn.model_selection import train_test_split",
+                        "from sklearn.pipeline import Pipeline",
+                        "from sklearn.compose import ColumnTransformer",
+                        "",
+                        "from jcopml.pipeline import num_pipe, cat_pipe",
+                        "from jcopml.utils import save_model, load_model",
+                        "from jcopml.plot import plot_missing_value",
+                        "from jcopml.feature_importance import mean_score_decrease"
+                    ]
+                },
+                {
+                    "name": "Import csv data",
+                    "snippet": [
+                        "df = pd.read_csv(\"____________\", index_col=\"___________\", parse_dates=[\"____________\"])",
+                        "df.head()"
+                    ]
+                },
+                {
+                    "name": "Dataset Splitting",
+                    "sub-menu": [
+                        {
+                            "name": "Shuffle Split",
+                            "snippet": [
+                                "X = df.drop(columns=\"___________\")",
+                                "y = \"_____________\"",
+                                "",
+                                "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)",
+                                "X_train.shape, X_test.shape, y_train.shape, y_test.shape"                        
+                            ]
+                        },
+                        {
+                            "name": "Stratified Shuffle Split",
+                            "snippet": [
+                                "X = df.drop(columns=\"___________\")",
+                                "y = \"_____________\"",
+                                "",
+                                "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)",
+                                "X_train.shape, X_test.shape, y_train.shape, y_test.shape"                        
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Preprocessor",
+                    "sub-menu": [
+                        {
+                            "name": "Common",
+                            "snippet": [
+                                "preprocessor = ColumnTransformer([",
+                                "    ('numeric', num_pipe(), [\"______________\"]),",
+                                "    ('categoric', cat_pipe(encoder='onehot'), [\"_____________\"]),",
+                                "])"
+                            ]
+                        },
+                        {
+                            "name": "Advance example",
+                            "snippet": [
+                                "# Note: You could not use gsp, rsp, and bsp recommendation in advance mode",
+                                "# You should specify your own parameter grid / interval when tuning",                        
+                                "preprocessor = ColumnTransformer([",
+                                "    ('numeric1', num_pipe(impute='mean', poly=2, scaling='standard', transform='yeo-johnson'), [\"______________\"]),",
+                                "    ('numeric2', num_pipe(impute='median', poly=2, scaling='robust'), [\"______________\"]),",
+                                "    ('categoric1', cat_pipe(encoder='ordinal'), [\"_____________\"]),",
+                                "    ('categoric2', cat_pipe(encoder='onehot'), [\"_____________\"])    ",
+                                "])"
+                            ]
+                        }
+                    ]
+
+                },
+                {
+                    "name": "Supervised Learning Pipeline",
+                    "sub-menu": [
+                        {
+                            "name": "Regression",
+                            "sub-menu": [
+                                {
+                                    "name": "K-Nearest Neighbor (KNN)",
+                                    "snippet": [
+                                        "from sklearn.neighbors import KNeighborsRegressor",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', KNeighborsRegressor())",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Support Vector Machine (SVM)",
+                                    "snippet": [
+                                        "from sklearn.svm import SVR",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', SVR(max_iter=500))",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Random Forest (RF)",
+                                    "snippet": [
+                                        "from sklearn.ensemble import RandomForestRegressor",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', RandomForestRegressor(n_jobs=-1, random_state=42))",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Extreme Gradient Boosting (XGBoost)",
+                                    "snippet": [
+                                        "from xgboost import XGBRegressor",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', XGBRegressor(n_jobs=-1, random_state=42))",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Linear Regression",
+                                    "snippet": [
+                                        "from sklearn.linear_model import LinearRegression",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', LinearRegression())",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "ElasticNet Regression",
+                                    "snippet": [
+                                        "from sklearn.linear_model import ElasticNet",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', ElasticNet())",
+                                        "])"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Classification",
+                            "sub-menu": [
+                                {
+                                    "name": "K-Nearest Neighbor (KNN)",
+                                    "snippet": [
+                                        "from sklearn.neighbors import KNeighborsClassifier",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', KNeighborsClassifier())",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Support Vector Machine (SVM)",
+                                    "snippet": [
+                                        "from sklearn.svm import SVC",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', SVC(max_iter=500))",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Random Forest (RF)",
+                                    "snippet": [
+                                        "from sklearn.ensemble import RandomForestClassifier",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', RandomForestClassifier(n_jobs=-1, random_state=42))",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Extreme Gradient Boosting (XGBoost)",
+                                    "snippet": [
+                                        "from xgboost import XGBClassifier",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', XGBClassifier(n_jobs=-1, random_state=42))",
+                                        "])"
+                                    ]
+                                },
+                                {
+                                    "name": "Logistic Regression",
+                                    "snippet": [
+                                        "from sklearn.linear_model import LogisticRegression",
+                                        "pipeline = Pipeline([",
+                                        "    ('prep', preprocessor),",
+                                        "    ('algo', LogisticRegression(solver='lbfgs', n_jobs=-1, random_state=42))",
+                                        "])"
+                                    ]
+                                }
+                            ]
+                        }                
+                    ]
+                },
+                {
+                    "name": "Hyperparameter Tuning",
+                    "sub-menu": [
+                        {
+                            "name": "Grid Search",
+                            "snippet": [
+                                "from sklearn.model_selection import GridSearchCV",
+                                "from jcopml.tuning import grid_search_params as gsp",
+                                "",
+                                "model = GridSearchCV(pipeline, gsp.\"_______________\", cv=\"___\", scoring='___', n_jobs=-1, verbose=1)",
+                                "model.fit(X_train, y_train)",
+                                "",
+                                "print(model.best_params_)",
+                                "print(model.score(X_train, y_train), model.best_score_, model.score(X_test, y_test))"
+                            ]
+                        },
+                        {
+                            "name": "Randomized Search",
+                            "snippet": [
+                                "from sklearn.model_selection import RandomizedSearchCV",
+                                "from jcopml.tuning import random_search_params as rsp",
+                                "",
+                                "model = RandomizedSearchCV(pipeline, rsp.\"_______________\", cv=\"___\", scoring='___', n_iter=\"___\", n_jobs=-1, verbose=1, random_state=42)",
+                                "model.fit(X_train, y_train)",
+                                "",
+                                "print(model.best_params_)",
+                                "print(model.score(X_train, y_train), model.best_score_, model.score(X_test, y_test))"
+                            ]
+                        },
+                        {
+                            "name": "Bayesian Search",
+                            "snippet": [
+                                "from jcopml.tuning.skopt import BayesSearchCV",
+                                "from jcopml.tuning import bayes_search_params as bsp",
+                                "",
+                                "model = BayesSearchCV(pipeline, bsp.\"_______________\", cv=\"___\", scoring=\"__\", n_iter=\"___\", n_jobs=-1, verbose=1, random_state=42)",
+                                "model.fit(X_train, y_train)",
+                                "",
+                                "print(model.best_params_)",
+                                "print(model.score(X_train, y_train), model.best_score_, model.score(X_test, y_test))"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Save model",
+                    "sub-menu": [
+                        {
+                            "name": "Save the whole search object",
+                            "snippet": ["save_model(model, \"__________.pkl\")"]
+                        },
+                        {
+                            "name": "Save best estimator only",
+                            "snippet": ["save_model(model.best_estimator_, \"__________.pkl\")"]
+                        }
+                    ]
+                }        
+            ]            
+        },
+        {
+            "name": "PyTorch",
+            "sub-menu": [
+                {
+                    "name": "Import common packages",
+                    "snippet": [
+                        "import torch",
+                        "from torch import nn, optim",
+                        "from jcopdl.callback import Callback, set_config",
+                        "",
+                        "device = torch.device(\"cuda:0\" if torch.cuda.is_available() else \"cpu\")",
+                        "device"
+                    ]
+                },
+
+                {
+                    "name": "Dataset & Dataloader",
+                    "sub-menu": [
+                        {
+                            "name": "Tensor Dataset",
+                            "snippet": [
+                                "from torch.utils.data import TensorDataset, DataLoader",
+                                "",
+                                "bs = \"______\"",
+                                "",
+                                "train_set = TensorDataset(\"________\")",
+                                "trainloader = DataLoader(train_set, batch_size=bs, shuffle=True, num_workers=\"__\")",
+                                "",
+                                "test_set = TensorDataset(\"_________\")",
+                                "testloader = DataLoader(test_set, batch_size=bs, shuffle=\"____\")"        
+                            ]
+                        },
+                        {
+                            "name": "Torchvision Image Folder",
+                            "snippet": [
+                                "from torchvision import datasets, transforms",
+                                "from torch.utils.data import DataLoader",
+                                "",
+                                "bs = \"______\"",
+                                "crop_size = \"____\"",
+                                "",
+                                "train_transform = transforms.Compose([",
+                                "    \"____________\",",
+                                "    transforms.ToTensor()",
+                                "])",
+                                "",
+                                "test_transform = transforms.Compose([",
+                                "    \"____________\",",
+                                "    transforms.ToTensor()",
+                                "])",
+                                "",
+                                "train_set = datasets.ImageFolder(\"________\", transform=train_transform)",
+                                "trainloader = DataLoader(train_set, batch_size=bs, shuffle=True, num_workers=4)",
+                                "",
+                                "test_set = datasets.ImageFolder(\"________\", transform=test_transform)",
+                                "testloader = DataLoader(test_set, batch_size=bs, shuffle=\"____\")"
+                            ]
+                        }                    
+                    ]
+                },
+                {
+                    "name": "Arsitektur & Config",
+                    "sub-menu": [
+                        {
+                            "name": "Template",
+                            "snippet": [
+                                "class MyCustomModule(nn.Module):",
+                                "    def __init__(self):",
+                                "        super().__init__()",
+                                "        ",
+                                "        ",
+                                "    def forward(self, x):",
+                                "        "
+                            ]
+                        },
+                        {
+                            "name": "ANN Example",
+                            "snippet": [
+                                "from jcopdl.layers import linear_block",
+                                "",
+                                "class NN(nn.Module):",
+                                "    def __init__(self):",
+                                "        super().__init__()",
+                                "        self.fc = nn.Sequential(",
+                                "            linear_block(input_size, n1, dropout=dropout),",
+                                "            linear_block(n1, n2, dropout=dropout),",
+                                "            linear_block(n2, output_size, activation='_________')",
+                                "        ),",                                
+                                "    ",                        
+                                "    def forward(self, x):",
+                                "        return self.fc(x)"
+                            ]
+                        },
+                        {
+                            "name": "CNN Example",
+                            "snippet": [
+                                "from jcopdl.layers import linear_block, conv_block",
+                                "",
+                                "class CNN(nn.Module):",
+                                "    def __init__(self):",
+                                "        super().__init__()",
+                                "        self.conv = nn.Sequential(",
+                                "            conv_block(\"___\", \"___\"),",
+                                "            conv_block(\"___\", \"___\"),            ",
+                                "            nn.Flatten()",
+                                "        )",
+                                "        ",
+                                "        self.fc = nn.Sequential(",
+                                "            linear_block(\"_____\", \"_____\", dropout=\"_____\"),",
+                                "            linear_block(\"_____\", \"_____\", activation=\"______\")",
+                                "        )",
+                                "        ",
+                                "    def forward(self, x):",
+                                "        return self.fc(self.conv(x))"
+                            ]
+                        }                        
+                    ]
+                },
+                {
+                    "name": "Training Preparation (MCOC)",
+                    "snippet": [
+                        "model = \"_______\"",
+                        "criterion = \"_______\"",
+                        "optimizer = optim.AdamW(model.parameters(), lr=0.001)",
+                        "callback = Callback(model, config, outdir=\"model\")"
+                    ]
+                },
+                {
+                    "name": "Training Loop",
+                    "sub-menu": [
+                        {
+                            "name": "Standard",
+                            "snippet": [
+                                "from tqdm.auto import tqdm",
+                                "",
+                                "def loop_fn(mode, dataset, dataloader, model, criterion, optimizer, device):",
+                                "    if mode == \"train\":",
+                                "        model.train()",
+                                "    elif mode == \"test\":",
+                                "        model.eval()",
+                                "    cost = 0",
+                                "    for feature, target in tqdm(dataloader, desc=mode.title()):",
+                                "        feature, target = feature.to(device), target.to(device)",
+                                "        output = model(feature)",
+                                "        loss = criterion(output, target)",
+                                "        ",
+                                "        if mode == \"train\":",
+                                "            loss.backward()",
+                                "            optimizer.step()",
+                                "            optimizer.zero_grad()",
+                                "        ",
+                                "        cost += loss.item() * feature.shape[0]",
+                                "    cost = cost / len(dataset)",
+                                "    return cost"
+                            ]
+                        },                        
+                        {
+                            "name": "Include accuracy",
+                            "snippet": [
+                                "from tqdm.auto import tqdm",
+                                "",
+                                "def loop_fn(mode, dataset, dataloader, model, criterion, optimizer, device):",
+                                "    if mode == \"train\":",
+                                "        model.train()",
+                                "    elif mode == \"test\":",
+                                "        model.eval()",
+                                "    cost = correct = 0",
+                                "    for feature, target in tqdm(dataloader, desc=mode.title()):",
+                                "        feature, target = feature.to(device), target.to(device)",
+                                "        output = model(feature)",
+                                "        loss = criterion(output, target)",
+                                "        ",
+                                "        if mode == \"train\":",
+                                "            loss.backward()",
+                                "            optimizer.step()",
+                                "            optimizer.zero_grad()",
+                                "        ",
+                                "        cost += loss.item() * feature.shape[0]",
+                                "        correct += (output.argmax(1) == target).sum().item()",
+                                "    cost = cost / len(dataset)",
+                                "    acc = correct / len(dataset)",
+                                "    return cost, acc"
+                            ]
+                        },
+                        {
+                            "name": "RNN with BPTT",
+                            "snippet": [
+                                "from tqdm.auto import tqdm",
+                                "",
+                                "def loop_fn(mode, dataset, dataloader, model, criterion, optimizer, device):",
+                                "    if mode == \"train\":",
+                                "        model.train()",
+                                "    elif mode == \"test\":",
+                                "        model.eval()",
+                                "    cost = 0",
+                                "    for feature, target in tqdm(dataloader, desc=mode.title()):",
+                                "        feature, target = feature.to(device), target.to(device)",
+                                "        output, hidden = model(feature, None)",
+                                "        loss = criterion(output, target)",
+                                "        ",
+                                "        if mode == \"train\":",
+                                "            loss.backward()",
+                                "            optimizer.step()",
+                                "            optimizer.zero_grad()",
+                                "        ",
+                                "        cost += loss.item() * feature.shape[0]",
+                                "    cost = cost / len(dataset)",
+                                "    return cost"
+                            ]
+                        },                        
+                        {
+                            "name": "RNN with Truncated BPTT",
+                            "snippet": [
+                                "from tqdm.auto import tqdm",
+                                "",
+                                "def loop_fn(mode, dataset, dataloader, model, criterion, optimizer, device):",
+                                "    if mode == \"train\":",
+                                "        model.train()",
+                                "    elif mode == \"test\":",
+                                "        model.eval()",
+                                "    cost = 0",
+                                "    for feature, target in tqdm(dataloader, desc=mode.title()):",
+                                "        hidden = None",
+                                "        for step in range(feature.shape[1]):",
+                                "            feature_step, target_step = feature[:, step, :, :].to(device), target[:, step, :, :].to(device)",
+                                "            output, hidden = model(feature_step, hidden)",
+                                "            loss = criterion(output, target_step)",
+                                "        ",
+                                "            if mode == \"train\":",
+                                "                loss.backward()",
+                                "                optimizer.step()",
+                                "                optimizer.zero_grad()",
+                                "",
+                                "                hidden.detach_()",
+                                "        ",
+                                "        cost += loss.item() * feature.shape[0]",
+                                "    cost = cost / len(dataset)",
+                                "    return cost"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Training",
+                    "sub-menu": [
+                        {
+                            "name": "Standard",
+                            "snippet": [
+                                "while True:",
+                                "    train_cost = loop_fn(\"train\", train_set, trainloader, model, criterion, optimizer, device)",
+                                "    with torch.no_grad():",
+                                "        test_cost = loop_fn(\"test\", test_set, testloader, model, criterion, optimizer, device)",
+                                "    ",
+                                "    # Logging",
+                                "    callback.log(train_cost, test_cost)",
+                                "",
+                                "    # Checkpoint",
+                                "    callback.save_checkpoint()",
+                                "        ",
+                                "    # Runtime Plotting",
+                                "    callback.cost_runtime_plotting()",
+                                "    ",
+                                "    # Early Stopping",
+                                "    if callback.early_stopping(model, monitor=\"test_cost\"):",
+                                "        callback.plot_cost()",
+                                "        break"
+                            ]                        
+                        },
+                        {
+                            "name": "Include accuracy",
+                            "snippet": [
+                                "while True:",
+                                "    train_cost, train_score = loop_fn(\"train\", train_set, trainloader, model, criterion, optimizer, device)",
+                                "    with torch.no_grad():",
+                                "        test_cost, test_score = loop_fn(\"test\", test_set, testloader, model, criterion, optimizer, device)",
+                                "    ",
+                                "    # Logging",
+                                "    callback.log(train_cost, test_cost, train_score, test_score)",
+                                "",
+                                "    # Checkpoint",
+                                "    callback.save_checkpoint()",
+                                "        ",
+                                "    # Runtime Plotting",
+                                "    callback.cost_runtime_plotting()",
+                                "    callback.score_runtime_plotting()",
+                                "    ",
+                                "    # Early Stopping",
+                                "    if callback.early_stopping(model, monitor=\"test_score\"):",
+                                "        callback.plot_cost()",
+                                "        callback.plot_score()",
+                                "        break"
+                            ]                        
+                        }                        
+                    ]
+                },
+                {
+                    "name": "Load Best Model",
+                    "snippet": [
+                        "weights = torch.load(\"________________\", map_location=\"cpu\")",
+                        "model.load_state_dict(weights)",
+                        "model = model.to(device);"        
+                    ]
+                }
+            ]
+        }
+    ]
+}
